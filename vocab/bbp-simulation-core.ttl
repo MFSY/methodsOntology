@@ -1,0 +1,280 @@
+@prefix : <https://bbp-nexus.epfl.ch/voc/simulation/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bbpsim: <https://bbp-nexus.epfl.ch/voc/simulation/core/> .
+@base <https://bbp-nexus.epfl.ch/voc/simulation/core> .
+
+<https://bbp-nexus.epfl.ch/voc/simulation/core> rdf:type owl:Ontology ;
+                                                
+                                                owl:imports <http://www.w3.org/ns/prov-o-20130430> ,
+                                                            <https://bbp-nexus.epfl.ch/voc/core/> .
+
+
+#################################################################
+#
+#    Annotation properties
+#
+#################################################################
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/corerev
+
+<https://bbp-nexus.epfl.ch/voc/simulation/corerev> rdf:type owl:AnnotationProperty .
+
+
+
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/coreproviderId
+
+<https://bbp-nexus.epfl.ch/voc/simulation/coreproviderId> rdf:type owl:ObjectProperty .
+
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/brainRegion
+
+bbpsim:brainRegion rdf:type owl:ObjectProperty .
+
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/cellType
+
+bbpsim:cellType rdf:type owl:ObjectProperty .
+
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/dataSpace
+
+bbpsim:dataSpace rdf:type owl:ObjectProperty .
+
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/edges
+
+bbpsim:edges rdf:type owl:ObjectProperty .
+
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/electricalModels
+
+bbpsim:electricalModels rdf:type owl:ObjectProperty .
+
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/mechanisms
+
+bbpsim:mechanisms rdf:type owl:ObjectProperty .
+
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/morphology
+
+bbpsim:morphology rdf:type owl:ObjectProperty .
+
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/nodes
+
+bbpsim:nodes rdf:type owl:ObjectProperty .
+
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/seedPoint
+
+bbpsim:seedPoint rdf:type owl:ObjectProperty .
+
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/species
+
+bbpsim:species rdf:type owl:ObjectProperty .
+
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/state
+
+bbpsim:state rdf:type owl:ObjectProperty .
+
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/synapticmodels
+
+bbpsim:synapticmodels rdf:type owl:ObjectProperty .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/coreEntity
+
+<https://bbp-nexus.epfl.ch/voc/simulation/coreEntity> rdf:type owl:Class .
+
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/Circuit
+
+bbpsim:Circuit rdf:type owl:Class ;
+               
+               rdfs:subClassOf bbpsim:ProductionEntity .
+
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/DataSpace
+
+bbpsim:DataSpace rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf <http://www.w3.org/ns/prov#Collection> .
+
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/ElectricalModel
+
+bbpsim:ElectricalModel rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> .
+
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/MorphologySynthesis
+
+bbpsim:MorphologySynthesis rdf:type owl:Class ;
+                           
+                           rdfs:subClassOf <http://www.w3.org/ns/prov#Activity> .
+
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/ProductionEntity
+
+bbpsim:ProductionEntity rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf <https://bbp-nexus.epfl.ch/voc/core/Dataset> .
+
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/RawMorphology
+
+bbpsim:RawMorphology rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf <https://bbp-nexus.epfl.ch/voc/core/Morphology> .
+
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/RepairedMorphology
+
+bbpsim:RepairedMorphology rdf:type owl:Class ;
+                          
+                          rdfs:subClassOf <https://bbp-nexus.epfl.ch/voc/core/Morphology> .
+
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/State
+
+bbpsim:State rdf:type owl:Class .
+
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/SynthesisRelease
+
+bbpsim:SynthesisRelease rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf bbpsim:ProductionEntity .
+
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/SynthesisWorkflowExecution
+
+bbpsim:SynthesisWorkflowExecution rdf:type owl:Class ;
+                                  
+                                  rdfs:subClassOf bbpsim:WorkflowExecution .
+
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/SynthesisWorkflowPlan
+
+bbpsim:SynthesisWorkflowPlan rdf:type owl:Class ;
+                             
+                             rdfs:subClassOf bbpsim:WorkflowPlan .
+
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/SynthesizedMorphology
+
+bbpsim:SynthesizedMorphology rdf:type owl:Class ;
+                             
+                             rdfs:subClassOf <https://bbp-nexus.epfl.ch/voc/core/Morphology> .
+
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/WorkflowExecution
+
+bbpsim:WorkflowExecution rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf <http://www.w3.org/ns/prov#Activity> .
+
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/WorkflowPlan
+
+bbpsim:WorkflowPlan rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/Deprecated
+
+bbpsim:Deprecated rdf:type owl:NamedIndividual ,
+                           bbpsim:State .
+
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/Private
+
+bbpsim:Private rdf:type owl:NamedIndividual ,
+                        bbpsim:State .
+
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/Published
+
+bbpsim:Published rdf:type owl:NamedIndividual ,
+                          bbpsim:State .
+
+
+
+###  https://bbp-nexus.epfl.ch/voc/simulation/core/WIP
+
+bbpsim:WIP rdf:type owl:NamedIndividual ,
+                    bbpsim:State .
+
+
+
+
+###  Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net
+
